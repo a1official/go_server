@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <link rel="stylesheet" href="/static/style.css"> <!-- Optional CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .button-container {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+        form {
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h2>User Login Page</h2>
+
+    <div class="button-container">
+        <button onclick="location.href='/dashboard'">Go to Dashboard</button>
+        <button onclick="location.href='/admin-login'">Admin Login Page</button>
+    </div>
+
+    <hr>
+
+    <h3>Admin Login (Quick Access)</h3>
+    <form action="/admin-auth" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Login as Admin">
+    </form>
+</body>
+</html>
